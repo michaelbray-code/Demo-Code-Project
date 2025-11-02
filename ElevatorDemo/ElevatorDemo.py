@@ -43,7 +43,7 @@ def elevator_ride(start_floor, floor_list, animate=False):
 
         current = next_floor
 
-    print("\n🏢 You have reached the end of your Elevator Ride.")
+    print(f"\n🏢 You have reached the end of your Elevator Ride.")
     print(f"Floors visited in order: {', '.join(map(str, visited_floors))}")
     print(f"Total travel time: {total_time} seconds\n")
 
@@ -76,14 +76,14 @@ def get_positive_integer_input(prompt):
         if is_positive_integer(user_input):
             return int(user_input)
         else:
-            print("\n❌ Invalid input. Please enter a whole number greater than zero.")
+            print(f"\n❌ Invalid input. Please enter a whole number greater than zero.")
 
 def get_positive_floor_list_input(prompt):
     #Prompt user for a comma-separated list of valid positive integers.
     while True:
         floors_input = input(prompt).strip()
         if not floors_input:
-            print("\n❌ You must enter at least one floor.")
+            print(f"\n❌ You must enter at least one floor.")
             continue
 
         floor_list = []
@@ -103,6 +103,6 @@ def get_positive_floor_list_input(prompt):
         if floor_list:
             return floor_list
         else:
-            print("\n❌ No valid floor numbers found. Please try again.")
+            print(f"\n❌ No valid floor numbers found. Please try again.")
 
 if __name__ == "__main__": main()
